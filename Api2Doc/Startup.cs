@@ -37,6 +37,8 @@ namespace Api2Doc
                     Version = "v1"
                 });
 
+                //c.IncludeXmlComments(System.IO.Path.Combine(_environment.ContentRootPath, "Api2Doc.xml"));
+
                 //Ìí¼ÓAuthorization
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
                 {

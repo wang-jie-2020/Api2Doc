@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Api2Doc</name>
+    </assembly>
+    <members>
+        <member name="M:Api2Doc.Controllers.SwaggerController.GetDocFromSwaggerInner(System.String)">
+            <summary>
+            从swagger中直接拿openApi文档
+            </summary>
+            <param name="version"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api2Doc.Controllers.SwaggerController.GetDocBySwaggerUrl(System.String)">
+            <summary>
+            通过swagger的Url拿openApi文档
+            结论：1.从url访问拿到的api文档不是严格的openApi文档，很像但不是
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Api2Doc.Controllers.TokenController.CreateApp(System.String)">
+            <summary>
+            创建App
+            </summary>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Api2Doc.Controllers.TokenController.GetAppList(Api2Doc.Models.QueryApp)">
+            <summary>
+            获取App列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Api2Doc.Controllers.TokenController.Reset(System.String)">
+            <summary>
+            清空数据库和上传文件
+            </summary>
+            <param name="password">密码</param>
+            <returns></returns>
+        </member>
+        <member name="M:Api2Doc.Controllers.TokenController.GetToken(System.String,System.String)">
+            <summary>
+            获取Token
+            </summary>
+            <param name="appId">分配的应用ID</param>
+            <param name="appKey">分配的应用密钥</param>
+            <returns></returns>
+        </member>
+        <member name="M:Api2Doc.Extensions.ReflectionExtension.GetPrivateField``1(System.Object,System.String)">
+            <summary>
+            访问私有字段
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="instance"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api2Doc.Extensions.ReflectionExtension.SetPrivateField(System.Object,System.String,System.Object)">
+            <summary>
+            设置私有字段
+            </summary>
+            <param name="instance"></param>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Api2Doc.Extensions.ReflectionExtension.GetPrivateProperty``1(System.Object,System.String)">
+            <summary>
+            访问私有属性
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="instance"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Api2Doc.Extensions.ReflectionExtension.SetPrivateProperty(System.Object,System.String,System.Object)">
+            <summary>
+            设置私有属性
+            </summary>
+            <param name="instance"></param>
+            <param name="name"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:Api2Doc.Extensions.ReflectionExtension.CallPrivateMethod``1(System.Object,System.String,System.Object[])">
+            <summary>
+            访问私有方法
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="instance"></param>
+            <param name="name"></param>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Api2Doc.Models.QueryApp">
+            <summary>
+            查询Token参数
+            </summary>
+        </member>
+        <member name="P:Api2Doc.Models.QueryApp.password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Api2Doc.Models.QueryApp.pageNumber">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Api2Doc.Models.QueryApp.pageSize">
+            <summary>
+            页量
+            </summary>
+        </member>
+        <member name="T:Api2Doc.Models.SysKey">
+            <summary>
+            token管理
+            </summary>
+        </member>
+        <member name="P:Api2Doc.Models.SysKey.SkAppId">
+            <summary>
+            AppId   取Guid转成long，长度19位
+            </summary>
+        </member>
+        <member name="P:Api2Doc.Models.SysKey.SkAppKey">
+            <summary>
+            SkAppKey    密钥，取Guid的MD5值
+            </summary>
+        </member>
+        <member name="P:Api2Doc.Models.SysKey.SkName">
+            <summary>
+            名称、用户
+            </summary>
+        </member>
+        <member name="P:Api2Doc.Models.SysKey.SkCreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Api2Doc.Models.SysKey.SkToken">
+            <summary>
+            生成的Token
+            </summary>
+        </member>
+        <member name="P:Api2Doc.Models.SysKey.SkTokenExpireTime">
+            <summary>
+            Token过期时间
+            </summary>
+        </member>
+        <member name="P:Api2Doc.Models.SysKey.SkRemark">
+            <summary>
+            备注
+            </summary>
+        </member>
+    </members>
+</doc>

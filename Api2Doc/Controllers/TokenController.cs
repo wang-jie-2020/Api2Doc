@@ -32,12 +32,9 @@ namespace Api2Doc.Controllers
         /// <summary>
         /// 获取App列表
         /// </summary>
-        /// <param name="password">密码</param>
-        /// <param name="pageNumber">页码</param>
-        /// <param name="pageSize">页量</param>
         /// <returns></returns>
         [HttpGet]
-        public ActionResult<IEnumerable<SysKey>> GetAppList(string password, int pageNumber = 1, int pageSize = 20)
+        public ActionResult<IEnumerable<SysKey>> GetAppList(QueryApp queryApp)
         {
             var sk = new List<SysKey>();
             return Ok(sk);

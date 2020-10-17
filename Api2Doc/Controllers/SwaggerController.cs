@@ -15,6 +15,9 @@ using Microsoft.AspNetCore.StaticFiles;
 using System.Reflection;
 using Swashbuckle.AspNetCore.Swagger;
 using System.Net.Http;
+using Microsoft.OpenApi.Extensions;
+using Microsoft.OpenApi;
+using Microsoft.AspNetCore.Mvc.Routing;
 
 namespace Api2Doc.Controllers
 {
@@ -46,6 +49,8 @@ namespace Api2Doc.Controllers
                 throw new Exception("Swagger Json cannot be equal to null！");
             }
 
+            Console.WriteLine(JsonConvert.SerializeObject(json));
+
             //核心思路还是从html转其他格式的文档，但还未找到合适的组件
             var provider = new FileExtensionContentTypeProvider();
             var mime = provider.Mappings[".html"];
@@ -56,6 +61,7 @@ namespace Api2Doc.Controllers
             return File(bytes, mime);
             //return Ok(JsonConvert.SerializeObject(json));
         }
+
 
         /// <summary>
         /// 通过swagger的Url拿openApi文档
